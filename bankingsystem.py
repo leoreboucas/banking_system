@@ -20,8 +20,7 @@ while True:
         deposito = int(input("Digite o deposito que deseja depositar: "))
         if deposito >= 0:
             saldo += deposito
-            print(f"Foi depositado o valor de R${deposito: .2f}")
-            opcao = "e"
+            extrato += f"Depósito: R$ {deposito: .2f}\n"
         else:
             print("Valor inválido")
     elif opcao == "s":
@@ -36,12 +35,14 @@ while True:
             else:
                 saldo -= saque
                 numero_de_saque += 1
-                print(f"Você sacou R${saque: .2f} da conta.")
+                extrato += f"Saque: R$ {saque: .2f}\n"
 
 
 
     elif opcao == "e":
-        print(f"A conta tem o valor de R$ {saldo: .2f}")
+        print(f"{extrato}")
+        print(f"Extrato: R$ {saldo: .2f}")
+              
     elif opcao == "q":
         print("Fim da operação")
         break
