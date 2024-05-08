@@ -28,7 +28,7 @@ while True:
         if numero_de_saque >= LIMITE_DE_SAQUE: 
             print("Você atingiu o limite de saque permitido.")
         else:
-            saque = int(input("Digite o valor que deseja sacar: "))
+            saque = float(input("Digite o valor que deseja sacar: "))
             if saque >= limite:
                 print(f"Não é permitido saque com valores acima de R$ {limite: .2f}")
             elif saque >= saldo:
