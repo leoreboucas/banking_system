@@ -17,7 +17,7 @@ LIMITE_DE_SAQUE = 3
 while True:
     opcao = input(menu)
     if opcao == "d":
-        deposito = int(input("Digite o deposito que deseja depositar: "))
+        deposito = float(input("Digite o deposito que deseja depositar: "))
         if deposito >= 0:
             saldo += deposito
             extrato += f"Depósito: R$ {deposito: .2f}\n"
